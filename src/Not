@@ -1,0 +1,5 @@
+in 'view' wird die Oberfläche erschaffen
+in 'model' werden die Daten gespeichert und wieder abgerufen
+in 'controller' hinter liegt die Spiellogik und die Kontrolle über die einzelnen Ebenen des Programms
+
+Es ist eine '3-SCHICHT-ARCHITEKTUR'
