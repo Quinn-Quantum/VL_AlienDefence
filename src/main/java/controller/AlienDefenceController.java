@@ -2,7 +2,7 @@ package controller;
 
 import model.Level;
 import model.persistence.IPersistance;
-import toDo.User;
+import model.User;
 
 public class AlienDefenceController {
 	

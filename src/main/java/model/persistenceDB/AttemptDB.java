@@ -14,7 +14,7 @@ import java.util.Vector;
 import model.Attempt;
 import model.Level;
 import model.persistence.IAttemptPersistance;
-import toDo.User;
+import model.User;
 
 public class AttemptDB implements IAttemptPersistance {
 

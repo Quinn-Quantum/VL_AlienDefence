@@ -3,8 +3,6 @@ package model;
 import java.time.LocalDateTime;
 import java.util.Vector;
 
-import toDo.User;
-
 public class Attempt {
 
 	// Attribute

@@ -24,8 +24,7 @@ import javax.swing.border.EmptyBorder;
 import controller.AlienDefenceController;
 import controller.GameController;
 import model.Level;
-import model.persistenceDB.PersistanceDB;
-import toDo.User;
+import model.User;
 import view.game.GameGUI;
 
 @SuppressWarnings("serial")

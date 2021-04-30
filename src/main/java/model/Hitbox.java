@@ -70,7 +70,7 @@ public class Hitbox {
 		return contains(upperleft) && contains(lowerright);
 	}
 
-	public static Hitbox generateRandomHitbox() {
+	public static Hitbox generateRandomHitbox () {
 		int x = rand.nextInt(MAXWIDTH + 1);
 		int y = rand.nextInt(MAXHEIGHT + 1);
 		int width = rand.nextInt(MAXWIDTH - x + 1);

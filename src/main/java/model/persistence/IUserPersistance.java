@@ -1,6 +1,6 @@
 package model.persistence;
 
-import toDo.User;
+import model.User;
 
 public interface IUserPersistance {
 

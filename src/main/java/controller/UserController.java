@@ -1,6 +1,7 @@
-package toDo;
+package controller;
 
 import model.persistence.IUserPersistance;
+import model.User;
 
 /**
  * controller for users

@@ -6,7 +6,7 @@ import java.util.List;
 import model.Level;
 import model.Point;
 import model.Target;
-import toDo.User;
+import model.User;
 import view.menue.Highscore;
 
 public class GameController {

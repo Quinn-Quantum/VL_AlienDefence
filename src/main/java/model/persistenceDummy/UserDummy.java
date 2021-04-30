@@ -3,7 +3,7 @@ package model.persistenceDummy;
 import java.time.LocalDate;
 
 import model.persistence.IUserPersistance;
-import toDo.User;
+import model.User;
 
 /**
  * Dummyklasse zum Testen
