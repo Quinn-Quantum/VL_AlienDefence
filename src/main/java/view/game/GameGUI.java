@@ -34,7 +34,7 @@ public class GameGUI extends JFrame {
 		// Fenstergestaltung
 		setSize(WIDTH, HEIGHT);
 		setLocation(10, 10);
-		setResizable(false);
+		setResizable(true);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		// Controller registrieren
 		this.gc = gc;
