@@ -1,7 +1,6 @@
 package view.menue;
 
-import java.awt.BorderLayout;
-import java.awt.Font;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
@@ -42,6 +41,8 @@ public class LevelChooser extends JPanel {
 		setLayout(new BorderLayout());
 
 		JPanel pnlButtons = new JPanel();
+		pnlButtons.setBackground(Color.black);
+
 		add(pnlButtons, BorderLayout.SOUTH);
 
 		JButton btnNewLevel = new JButton("Neues Level");
@@ -76,6 +77,8 @@ public class LevelChooser extends JPanel {
 		});
 
 		JLabel lblLevelauswahl = new JLabel("Levelauswahl");
+		lblLevelauswahl.setBackground(Color.BLACK);
+		lblLevelauswahl.setForeground(Color.green);
 		lblLevelauswahl.setFont(new Font("Arial", Font.BOLD, 18));
 		lblLevelauswahl.setHorizontalAlignment(SwingConstants.CENTER);
 		add(lblLevelauswahl, BorderLayout.NORTH);
@@ -84,6 +87,9 @@ public class LevelChooser extends JPanel {
 		add(spnLevels, BorderLayout.CENTER);
 
 		tblLevels = new JTable();
+		tblLevels.setBackground(Color.BLACK);
+		tblLevels.setForeground(Color.orange);
+
 		tblLevels.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		spnLevels.setViewportView(tblLevels);
 
