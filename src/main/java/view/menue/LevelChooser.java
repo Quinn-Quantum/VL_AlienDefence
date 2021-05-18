@@ -15,8 +15,12 @@ import javax.swing.ListSelectionModel;
 import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableModel;
 
+import controller.AlienDefenceController;
+import controller.GameController;
 import controller.LevelController;
 import model.Level;
+import model.User;
+import view.game.GameGUI;
 
 @SuppressWarnings("serial")
 public class LevelChooser extends JPanel {
@@ -31,7 +35,7 @@ public class LevelChooser extends JPanel {
 	 * 
 	 * @param leveldesignWindow
 	 */
-	public LevelChooser(LevelController lvlControl, LeveldesignWindow leveldesignWindow) {
+	public LevelChooser(LevelController lvlControl, LeveldesignWindow leveldesignWindow, AlienDefenceController alienDefenceController, User user) {
 		this.lvlControl = lvlControl;
 		this.leveldesignWindow = leveldesignWindow;
 
@@ -67,7 +71,7 @@ public class LevelChooser extends JPanel {
 		JButton btnSpielen = new JButton ("Speilen");
 		btnSpielen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				btnSpeilen_Clicked();
+				btnSpielen_Clicked(alienDefenceController, user);
 			}
 		});
 
@@ -117,7 +121,12 @@ public class LevelChooser extends JPanel {
 		this.lvlControl.deleteLevel(level_id);
 		this.updateTableData();
 	}
-	public void btnSpeilen_Clicked(){
+	public void btnSpielen_Clicked(AlienDefenceController alienDefenceController, User user){
 		//Spielaufruf
+		int level_id = Integer
+				.parseInt((String) this.tblLevels.getModel().getValueAt(this.tblLevels.getSelectedRow(), 0));
+		Level level = alienDefenceController.getLevelController().readLevel(level_id);
+		GameController gameController = alienDefenceController.startGame(level, user);
+		new GameGUI(gameController).start();
 	}
 }
