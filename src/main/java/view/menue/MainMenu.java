@@ -185,7 +185,7 @@ public class MainMenu extends JFrame {
 
 						List<Level> arrLevel = alienDefenceController.getLevelController().readAllLevels();
 						//Aufgabe 1
-						new LeveldesignWindow(alienDefenceController.getLevelController(), alienDefenceController.getTargetController());
+						new LeveldesignWindow(alienDefenceController.getLevelController(), alienDefenceController.getTargetController(), user);
 
 						//GameController gameController = alienDefenceController.startGame(arrLevel.get(selectedLevel), user);
 						//new GameGUI(gameController).start();
@@ -215,7 +215,7 @@ public class MainMenu extends JFrame {
 		btnLeveleditor.setBackground(Color.ORANGE);
 		btnLeveleditor.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new LeveldesignWindow(alienDefenceController.getLevelController(), alienDefenceController.getTargetController());
+				new LeveldesignWindow(alienDefenceController.getLevelController(), alienDefenceController.getTargetController(), null);
 
 			}
 		});

@@ -6,9 +6,11 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import controller.AlienDefenceController;
 import controller.LevelController;
 import controller.TargetController;
 import model.Level;
+import model.User;
 
 @SuppressWarnings("serial")
 public class LeveldesignWindow extends JFrame {
@@ -23,7 +25,7 @@ public class LeveldesignWindow extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public LeveldesignWindow(LevelController lvlControl, TargetController targetControl) {
+	public LeveldesignWindow(LevelController lvlControl, TargetController targetControl, AlienDefenceController alienDefenceController, User user) {
 		this.lvlControl = lvlControl;
 
 		setTitle("Leveldesigner");
@@ -34,8 +36,8 @@ public class LeveldesignWindow extends JFrame {
 		setContentPane(contentPane);
 		this.cards = new CardLayout();
 		contentPane.setLayout(cards);
-
-		this.cardChooseLevel = new LevelChooser(lvlControl, this);
+		//lvlControl
+		this.cardChooseLevel = new LevelChooser(lvlControl, this,alienDefenceController ,user);
 		contentPane.add(cardChooseLevel, "levelChooser");
 
 		this.cardLevelEditor = new LevelEditor(this, lvlControl, targetControl, Level.getDefaultLevel());
