@@ -126,7 +126,21 @@ public class LevelChooser extends JPanel {
 		int level_id = Integer
 				.parseInt((String) this.tblLevels.getModel().getValueAt(this.tblLevels.getSelectedRow(), 0));
 		Level level = alienDefenceController.getLevelController().readLevel(level_id);
-		GameController gameController = alienDefenceController.startGame(level, user);
-		new GameGUI(gameController).start();
+		Thread t = new Thread("GameThread") {
+
+			@Override
+			public void run() {
+
+				// Spielaufruf durchführen
+				GameController gameController = alienDefenceController.startGame(level, user);
+				new GameGUI(gameController).start();
+
+			}
+		};
+		//Prozess starten
+		t.start();
+		//Levelauswahlfenster schließen
+		this.leveldesignWindow.dispose();
+
 	}
 }
