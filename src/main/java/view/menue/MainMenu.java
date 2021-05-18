@@ -119,26 +119,26 @@ public class MainMenu extends JFrame {
 		contentPane.add(passwordTextField, c);
 
 		// Text Level
-		JLabel levelText = new JLabel("Level: "); // Einfacher Text
-		levelText.setForeground(Color.orange);
-		c.gridy = 6;
-		contentPane.add(levelText, c);
+		//JLabel levelText = new JLabel("Level: "); // Einfacher Text
+		//levelText.setForeground(Color.orange);
+		//c.gridy = 6;
+		//contentPane.add(levelText, c);
 
 		// Levelliste für die ComboBox abrufen
 		List<Level> arrLevel = this.alienDefenceController.getLevelController().readAllLevels();
 		String[] arrLevelNames = getLevelNames(arrLevel);
 		
 		// Level Auswahlbox - ActionListener
-		JComboBox<String> combo = new JComboBox<String>(arrLevelNames);
-		c.gridy = 7;
-		contentPane.add(combo, c);
-		ActionListener actLisCombo = new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				selectedLevel = combo.getSelectedIndex();
-			}
-		};
-		combo.addActionListener(actLisCombo); // Listener
+		//JComboBox<String> combo = new JComboBox<String>(arrLevelNames);
+		//c.gridy = 7;
+		//contentPane.add(combo, c);
+		//ActionListener actLisCombo = new ActionListener() {
+		//	@Override
+		//	public void actionPerformed(ActionEvent e) {
+		//		selectedLevel = combo.getSelectedIndex();
+		//	}
+		//};
+		//combo.addActionListener(actLisCombo); // Listener
 
 		// Button Spielen - ActionListener
 		JButton btnNewButton = new JButton("Spielen");
@@ -202,7 +202,7 @@ public class MainMenu extends JFrame {
 
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new Highscore(alienDefenceController.getAttemptController(), arrLevel.get(selectedLevel));
+				new Highscore(alienDefenceController.getAttemptController(), arrLevel.get(1));
 			}
 		});
 		// selectedLevel
