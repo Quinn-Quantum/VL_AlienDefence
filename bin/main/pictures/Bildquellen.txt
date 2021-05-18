@@ -1,0 +1,18 @@
+ufo_1.png: https://pixabay.com/de/illustrations/raumschiff-ufo-weltraum-weltall-3435510/
+ufo_2.png: https://pixabay.com/de/illustrations/ufo-raumschiff-astronaut-2718084/
+ufo_3.png: https://pixabay.com/de/illustrations/ufo-au%C3%9Ferirdischer-raum-raumschiff-3157681/
+ufo_4.png: https://pixabay.com/de/illustrations/ufo-au%C3%9Ferirdischer-raumschiff-raum-4199301/
+ufo_5.png: https://pixabay.com/de/illustrations/ufo-au%C3%9Ferirdisch-science-fiction-5113558/
+logo.png: https://pixabay.com/de/vectors/schild-verbot-verbotsschild-1283415/
+background_1.png: https://pixabay.com/de/photos/tianjin-d%C3%A4mmerung-stadt-landschaft-2185510/
+background_2.png: https://pixabay.com/de/photos/fluss-h%C3%BCgel-abend-california-1590010/
+background_3.png: https://pixabay.com/de/photos/im-freien-new-york-skyline-nyc-5129182/
+background_4.png: https://pixabay.com/de/illustrations/au%C3%9Ferirdischer-landschaft-planeten-4849881/
+background_5.png: https://pixabay.com/de/photos/milchstra%C3%9Fe-sterne-nacht-himmel-923738/
+background_6.png: https://pixabay.com/de/photos/schwarz-und-wei%C3%9F-dom-architektur-5089030/
+background_7.png: https://pixabay.com/de/illustrations/industrie-dystopie-ende-der-welt-5078196/
+background_8.png: https://pixabay.com/de/photos/italien-landschaft-landschaftlich-1758193/
+background_9.png: https://pixabay.com/de/photos/landschaft-herbst-nebel-dorf-615429/
+background_10.png: https://pixabay.com/de/illustrations/ufo-raumschiff-science-fiction-1942755/
+explosion.png: https://pixabay.com/de/vectors/explosion-detonation-hochkonjunktur-417894/
+

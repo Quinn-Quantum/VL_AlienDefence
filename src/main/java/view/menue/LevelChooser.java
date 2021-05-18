@@ -64,6 +64,13 @@ public class LevelChooser extends JPanel {
 		});
 		pnlButtons.add(btnDeleteLevel);
 
+		JButton btnSpielen = new JButton ("Speilen");
+		btnSpielen.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				btnSpeilen_Clicked();
+			}
+		});
+
 		JLabel lblLevelauswahl = new JLabel("Levelauswahl");
 		lblLevelauswahl.setFont(new Font("Arial", Font.BOLD, 18));
 		lblLevelauswahl.setHorizontalAlignment(SwingConstants.CENTER);
@@ -109,5 +116,8 @@ public class LevelChooser extends JPanel {
 				.parseInt((String) this.tblLevels.getModel().getValueAt(this.tblLevels.getSelectedRow(), 0));
 		this.lvlControl.deleteLevel(level_id);
 		this.updateTableData();
+	}
+	public void btnSpeilen_Clicked(){
+		//Spielaufruf
 	}
 }
