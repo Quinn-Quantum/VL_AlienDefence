@@ -41,6 +41,7 @@ public class LevelChooser extends JPanel {
 		setLayout(new BorderLayout());
 
 		JPanel pnlButtons = new JPanel();
+
 		pnlButtons.setBackground(Color.black);
 
 		add(pnlButtons, BorderLayout.SOUTH);
