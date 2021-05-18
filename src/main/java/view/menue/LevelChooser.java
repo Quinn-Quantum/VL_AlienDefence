@@ -35,7 +35,7 @@ public class LevelChooser extends JPanel {
 	 * 
 	 * @param leveldesignWindow
 	 */
-	public LevelChooser(LevelController lvlControl, LeveldesignWindow leveldesignWindow, AlienDefenceController alienDefenceController, User user) {
+	public LevelChooser(LevelController lvlControl, LeveldesignWindow leveldesignWindow, AlienDefenceController alienDefenceController, User user, String source) {
 		this.lvlControl = lvlControl;
 		this.leveldesignWindow = leveldesignWindow;
 
@@ -88,6 +88,15 @@ public class LevelChooser extends JPanel {
 		spnLevels.setViewportView(tblLevels);
 
 		this.updateTableData();
+
+		if(source.equals("Testen")){
+			btnNewLevel.setVisible(false);
+			btnUpdateLevel.setVisible(false);
+			btnDeleteLevel.setVisible(false);
+		}
+		else if(source.equals("Leveleditor")){
+			btnSpielen.setVisible(false);
+		}
 	}
 
 	private String[][] getLevelsAsTableModel() {
