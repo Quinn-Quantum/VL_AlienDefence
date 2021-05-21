@@ -1,11 +1,6 @@
 package view.menue;
 
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Graphics;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.Image;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
@@ -52,8 +47,15 @@ public class MainMenu extends JFrame {
 
 		// Frame Formatierungen
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
+		int width = gd.getDisplayMode().getWidth();
+		int height = gd.getDisplayMode().getHeight();
+		setBounds(100, 1, width, height);
+		setExtendedState(JFrame.MAXIMIZED_BOTH);
+		Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
 		JPanel contentPane = new JPanel();
+		//Dimension screen1 = Toolkit.getDefaultToolkit().getScreenSize();
+		//contentPane.setSize(screen1);
 		contentPane.setBackground(new Color(0, 0, 0));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);

@@ -63,6 +63,7 @@ public class LevelChooser extends JPanel {
 		pnlButtons.add(btnUpdateLevel);
 
 		JButton btnDeleteLevel = new JButton("Level l\u00F6schen");
+
 		btnDeleteLevel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btnDeleteLevel_Clicked();
@@ -70,12 +71,7 @@ public class LevelChooser extends JPanel {
 		});
 		pnlButtons.add(btnDeleteLevel);
 
-		JButton btnSpielen = new JButton ("Speilen");
-		btnSpielen.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				btnSpielen_Clicked(alienDefenceController, user);
-			}
-		});
+
 
 		JLabel lblLevelauswahl = new JLabel("Levelauswahl");
 		lblLevelauswahl.setBackground(Color.BLACK);
@@ -83,6 +79,14 @@ public class LevelChooser extends JPanel {
 		lblLevelauswahl.setFont(new Font("Arial", Font.BOLD, 18));
 		lblLevelauswahl.setHorizontalAlignment(SwingConstants.CENTER);
 		add(lblLevelauswahl, BorderLayout.NORTH);
+
+
+		JButton btnSpielen = new JButton ("Speilen");
+		btnSpielen.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				btnSpielen_Clicked(alienDefenceController, user);
+			}
+		});
 
 		JScrollPane spnLevels = new JScrollPane();
 		add(spnLevels, BorderLayout.CENTER);
